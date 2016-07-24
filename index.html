@@ -1,0 +1,502 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Simplifying Flexible Content With Advanced Custom Fields</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sasha.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="img/paperbkg.jpg" data-background-repeat="repeat" data-background-size="852px"><h1>Simplifying Flexible Content With Advanced Custom Fields</h1>
+					<h4><span>Sasha Endoh</span><span><a href="http://www.twitter.com/sashaendoh" class="plain">@sashaendoh</a></span><span><a href="http://www.sashaendoh.com" class="plain">sashaendoh.com</a></span><h4>
+						<br>
+						<br>
+						<blockquote><p>Making the simple complicated is commonplace; making the complicated simple, awesomely simple, that’s creativity.</p> <span class="attribution">Charles Mingus</span></blockquote>
+				</section>
+				<section><h2>Why Me</h2>
+					<div class="big-column">
+						<p class="">I'm a front-end developer, designer, and web strategist running my own interactive design studio here in Montreal</p>
+						<p class="fragment">I’ve been at it for nearly a decade, so I’ve worked on a large variety of projects.</p>
+						<p class="fragment">These days, the focus of my studio's work is on making WordPress websites for non-profits, cause-based organizations, and other do-gooders.</p>
+					<p class="fragment smaller">They are the ones making a difference out there, they are they ones who really need our help.</p>
+					<p class="fragment">But has not always been my mandate, so I've worked with all sorts of clients from mom-and-pop shops, to corporations, and everywhere in-between.</p>
+						<!--<p class="smaller">poop and more poop</p>-->
+					</div>
+					<div class="small-column">
+						<img src="img/logo---large.jpg" class="plain" />
+						<!--<span class="img-caption">Image credit: <a href="http://giphy.com/tonybabel">http://giphy.com/tonybabel</a></span>-->
+					</div>
+
+				</section>
+				<section><h2>What all clients have in common</h2>
+					<p>Regardless of size, funding structure, location etc..
+						<ul>
+							<li class="fragment">clients are terrified of breaking their CMS websites
+								<ul>
+									<li class="fragment">they're not going to be poking around in the admin interface to get to know it better</li>
+									<li class="fragment">it should be dead simple for them to work with their site's content</li>
+									<li class="fragment">we ought to reduce risk associated with their interactions in the admin area</li>
+								</ul>
+							</li>
+							<li class="fragment">they are always looking for ways to grow their business, but they don't want to re-design their website each time their business evolves a little
+								<ul>
+									<li class="fragment">they want flexible websites that will grow with them</li>
+									<li class="fragment">but... "flexibility" means different things in different situations, to different clients</li>
+									<li class="fragment">this is where your expertise as a web professional comes in really handy</li>
+								</ul>
+							</li>
+							<li class="fragment">They want the best value for their buck
+								<ul>
+									<li class="fragment">this applies to their dealings with you</li>
+									<li class="fragment">but this also applies to their internal operations</li>
+								</ul>
+							</li>
+						</ul>
+
+					</section>
+					<section><h2>Enter Page builders</h2>
+						<p>The way our (WordPress) community has addressed all of the above points is by developing page builder plugins. They are means to offer:</p>
+						<ul>
+							<li class="fragment">A simple way to change page &amp; post content</li>
+							<li class="fragment">A flexible system for altering page &amp; post layouts without coding</li>
+							<li class="fragment">An affordable way to integrate these capabilities</li>
+						</ul>
+
+					</section>
+					<section>
+						<section><h2>How page builders work</h2>
+							<ul>
+								<li class="fragment">Turn the content editor into a widgetized area (like a sidebar)</li>
+								<li class="fragment">creating rows and breaking them into columns, then populating these columns with content blocks (images, text, list of featured items, CTAs etc.)
+								</li>
+								<li class="fragment">drag-and-drop functionality to move around blocks of content</li>
+							</ul>
+							<p class="fragment">Which sounds great!... but let's take a closer look.</p>
+						</section>
+						<section><h2>WPBakery Visual Composer Overview</h2>
+							<div class="big-column">
+								<ul>
+									<li class="fragment">"#1 WordPress Page Builder Plugin" with 1,000,000+ users</li>
+									<li class="fragment">at only around $34 USD</li>
+									<li class="fragment">comes packaged with all those multi-purpose themes you see in ThemeForest, as well as many others</li>
+									<li class="fragment">offers a front-end editor so you can see your changes as you make them</li>
+									<li class="fragment">uses shortcodes to compile and output code</li>
+									<li class="fragment">comes with a large selection of shortcodes out-of-the-box</li>
+									<li class="fragment">you can "map" your own shortcodes</li>
+									<li class="fragment">can use your dynamic sidebars</li>
+									<li class="fragment">and widgets</li>
+								</ul>
+							</div>
+							<div class="small-column">
+								<img src="img/WPBVC.png" alt="SiteOrigin Page Builder Logo" class="plain"/>
+							</div>
+
+							</section>
+							<section><h2>SiteOrigin's Page Builder Overview</h2>
+								<div class="big-column">
+									<ul>
+										<li class="fragment">Free</li>
+										<li class="fragment">uses widgets only</li>
+										<li class="fragment">comes with a few extra widgets and has an extention plugin with more</li>
+										<li class="fragment">you can code your own widgets</li>
+										<li class="fragment">has a front-end "live editor"</li>
+									</ul>
+								</div>
+								<div class="small-column">
+									<img src="img/SOPB.JPG" alt="SiteOrigin Page Builder Logo" class="plain"/>
+								</div>
+							</section>
+						</section>
+						<section>
+							<section>
+								<h2>A closer look at interfaces</h2>
+								<p>WPBakery Visual Composter Workflow</p>
+								<video autoplay controls>
+									<source data-src="img/Visual-Composer-Demo.webm" type="video/webm" />
+									<!--<source data-src="video.mp4" type="video/mp4" />-->
+								</video>
+							</section>
+							<section>
+								<h2>A closer look at interfaces</h2>
+								<p>SiteOrigin's Page Builder Workflow</p>
+								<video autoplay controls>
+									<source data-src="img/Page-Builder-Demo.webm" type="video/webm" />
+									<!--<source data-src="video.mp4" type="video/mp4" />-->
+								</video>
+							</section>
+						</section>	
+						<section><h2>Now let's look at the front-end code</h2>
+							<div class="column">
+								<p class="fragment">Visual Composer</p>
+								<img src="img/VS2columntextimgOutput.JPG" class="plain fragment" alt="Visual Composer Output" />
+							</div>
+							<div class="column">
+								<p class="fragment">Page Builder</p>
+								<img src="img/SO2columntextimgoutput.JPG" class="plain fragment" alt="PAge Builder Output" />
+							</div>
+						</section>
+					<section>
+						<h2>The leftovers</h2>
+						<p>SO's Page Builder puts the content of your widgets in your content editor if you remove it...</p>
+						<img class="fragment" src="img/VisualComposerShortcodes.JPG" class="plain" alt="Visual Composer shortcode leftovers" />
+						<p class="fragment">...this is what you're left with after using Visual Composer.</p>
+					</section>
+				<section><h2>What's the real problem?</h2>
+					<p>It isn't page builders themselves!</p>
+					<p class="smaller">They're just catering to an existing audience and their demand for layout without coding, and there are lots of options they have to account for.</p>
+					<p class="fragment">The real problem is:</p>
+					<ul>
+						<li class="fragment">when we start using these plugins for client projects, instead of applying our expertise as developers and designers to create custom made solution
+							<ul>
+								<li class="fragment">Do your clients know what CSS classes do?</li>
+								<li class="fragment">Why should they?</li>
+								<li class="fragment">Do your clients need all those options?</li>
+								<li class="fragment">Why should your client need to make layout/design decisions?</li>
+							</ul>
+						</li>
+						<li class="fragment">when we mistake "all the options" for "flexibility"
+							<ul>
+								<li class="fragment">in reality, this is overwhelming</li>
+								<li class="fragment">which makes it unusable</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section><h2>Introducing ACF</h2>
+						<div class="big-column">
+							<p>Essentially, it’s the page builder for developers, so that clients can benefit from our expertise without having to re-invent the wheel.</p>
+							<p class="fragment">Allows you to create whole meta box areas and gives you control over where they appear</p><ul>
+							<li class="fragment">comes in two basic flavours: free and Pro (paid)</li>
+							<li class="fragment">Pro can be purchased separately for each project (at $25 AUD) or under a dev license (at $100 AUD) for unlimited activations.</li>
+							<li class="fragment">Very well documented and has a fabulous support forum.</li>
+						</ul>
+						</div>
+						<div class="small-column">
+							<img src="img/ACFLogo.JPG" alt="Advanced Custom Fields Logo" class="plain"/>
+						</div>
+					</section>
+					<section>
+						<h2>Available Fields</h2>
+						<div class="column">
+						<ul>
+							<li>BASIC
+								<ul>
+									<li>Text</li>
+									<li>Textarea</li>
+								</ul>
+							</li>
+							<li>CHOICE
+								<ul>
+									<li>Checkbox</li>
+									<li>Select</li>
+									<li>True / False</li>
+								</ul>
+							</li>
+							<li>CONTENT
+								<ul>
+									<li>File (Upload)</li>
+									<li class="fragment highlight-red" data-fragment-index="0">Gallery</li>
+									<li>Image</li>
+									<li>oEmbed</li>
+									<li>Wysiwyg Editor</li>
+								</ul>
+							</li>
+						</ul>
+						</div>
+					<div class="column">
+						<ul>
+							<li>JQUERY
+								<ul>
+									<li>Color Picker</li>
+									<li>Date Picker</li>
+									<li>Date Time Picker</li>
+									<li>Google Map</li>
+									<li>Time Picker</li>
+								</ul>
+							</li>
+							<li>LAYOUT
+								<ul>
+									<li>Clone</li>
+									<li class="fragment highlight-red" data-fragment-index="0">Flexible Content</li>
+									<li class="fragment highlight-red" data-fragment-index="0">Repeater</li>
+									<li>Tab</li>
+								</ul>
+							</li>
+							<li>RELATIONAL
+								<ul>
+									<li>Page Link</li>
+									<li>Post Object</li>
+									<li>Relationship</li>
+									<li>Taxonomy</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h2>ACF Admin Area</h2>
+						<img src="img/acf-field-groups.png" alt="ACF field groups screenshot" class="plain" />
+					</section>
+					<section>
+						<h2>ACF Field Groups</h2>
+						<img src="img/acf-add-new-field-group.png" alt="ACF field groups screenshot" class="plain" />
+					</section>
+					<section>
+						<h2>ACF Field Groups (cont)</h2>
+						<img src="img/acf-add-new-field-group2.png" alt="ACF field groups screenshot" class="plain" />
+					</section>
+				</section>
+					
+				<section>
+					<section>
+						<h2>ACF Implementation</h2>
+						<p>Displaying data from frields is extremely easy (and very well documented)!</p>
+						<p>Displaying a field</p>
+					<pre><code class="hljs">
+<p><&#63;php the_field('field_name'); ?></p>
+					</code></pre>
+
+						<p>Retrieving a field as a variable</p>
+					<pre><code class="hljs" >
+<&#63;php
+$variable = get_field('field_name');
+
+// do something with $variable
+
+?>
+					</code></pre>
+
+					</section>
+					<section>
+						<h2>ACF Implementation (cont)</h2>
+						<p>Using conditional statements</p>
+					<pre><code class="hljs">
+<&#63;php
+
+if(get_field('field_name')){
+	echo '<p>' . get_field('field_name') . '</p>';
+} &#63;>
+					</code></pre>
+					</section>
+					<section>
+						<h2>ACF Implementation (cont)</h2>
+						<p>Working with the Repeater Field</p>
+					<pre><code class="hljs">
+<&#63;php if( have_rows('repeater_field_name') ): &#63;>
+    <ul>
+    <&#63;php while( have_rows('repeater_field_name') ): the_row(); &#63;>
+        <li>sub_field_1 = <&#63;php the_sub_field('sub_field_1'); &#63;>, 
+        	sub_field_2 = <&#63;php the_sub_field('sub_field_2'); &#63;>, 
+        	etc
+        </li>
+        <&#63;php 
+        $sub_field_3 = get_sub_field('sub_field_3'); 
+        // do something with $sub_field_3
+        &#63;>
+    <&#63;php endwhile; &#63;>
+    </ul>
+<&#63;php endif; &#63;>
+					</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Real world example</h2>
+						<div class="big-column">
+							<p>Collaboration with Threespot (<a href="https://www.threespot.com/">threespot.com</a>) on new website for Poetry in America (<a href="http://www.poetryinamerica.org/">poetryinamerica.org</a>).</p>
+							<p class="fragment">The client: </p>
+							<p class="smaller fragment">educational non-profit production company offering a variety of programs, making poetry accessable to all.</p>
+							<p class="fragment">Project requirements: </p>
+							<p class="smaller fragment">an easy to use and update website that extended the organization's brand; storytelling achieved through felxible display of interstitial content blocks.</p>
+							<p class="fragment">Content blocks:</p>
+							<p class="smaller fragment">Featured Guests, Featured Staff, Featured Partners, Promo block, a fancy Pullquote, listing of Resources, a simple Button, Social Follow Block, Facebook Post Embed </p>
+						</div>
+						<div class="small-column">
+							<img src="img/PoetryinAmerica1.jpg" alt="Poetry in America website screenshot" class="plain"/>
+						</div>
+					</section>
+					<section>
+						<h2>We were going to use a page builder....</h2>
+						<ul>
+							<li class="fragment">...we saw that as a standard approach to flexibility in WordPress</li>
+							<li class="fragment">...we had a clearly defined set of blocks to build</li>
+							<li class="fragment">...and we weren't going to waste our client's time with layout decisions
+								<ul>
+									<li class="fragment">in fact, we went with the best UI practice of using a single column content well to have more control over the narative of our website.</li>
+								</ul>
+							</li>
+							<li class="fragment">...finally, ACF offered us a much more user-friendly approach to setting up the admin area interface!</li>
+						</ul>
+
+					</section>
+					<section>
+						<h2>ACF Admin Implementation</h2>
+						<div class="big-column">
+						<p>We used ACF to set-up a number of custom fields that allowed for flexbility:</p>
+						<p class="smaller">optional title variations, ability to pick whether a tile block has a solid background or a featured image, an optional video teaser instead of a featured image.</p>
+						<img src="img/PIAOptionalTitle.JPG" class="plain fragment" data-fragment-index="0"/> 
+					</div>
+					<div class="small-column"><img src="img/PIAVideoandBKG.JPG"  class="plain fragment" data-fragment-index="1"/>
+					</div>
+						
+					</section>
+					<section>
+						<h2>ACF Admin Implementation (cont)</h2>
+						<p>We set-up all our pre-defined blocks of content as groups on fields in ACF flexible content field, with a small variants where appropriate.</p>
+						<video autoplay controls>
+							<source data-src="img/PIA-ACF-Field-Group-Flexible.webm" type="video/webm" />
+							<!--<source data-src="video.mp4" type="video/mp4" />-->
+						</video>					
+					</section>
+
+					<section>
+						<h2>ACF Admin Implementation (cont)</h2>
+						<p>Here's the interface the client gets to work with.</p>
+						<video autoplay controls>
+							<source data-src="img/PIA=Admin-User-Interface.webm" type="video/webm" />
+							<!--<source data-src="video.mp4" type="video/mp4" />-->
+						</video>					
+					</section>
+
+					<section>
+						<h2>Displaying data from ACF</h2>
+						<p>The code in for our flexible field blocks</p>
+						<pre><code class="hljs">
+// check if the flexible content field has rows of data
+if( have_rows('page_builder') ):
+ 	// loop through the rows of data
+    while ( have_rows('page_builder') ) : the_row();
+
+	// check if current row layout is Text Block
+        if( get_row_layout() == 'text' ){
+        	$text = get_sub_field('text-block');
+        	if ($text){ echo wp_kses_post($text); }
+
+	// check if current row layout is Featured Staff Block
+    	} elseif( get_row_layout() == 'featured_staff' ){
+    		$staff_members = get_sub_field('choose_staff_members');
+    		if($staff_members){
+					 	</code></pre>
+					</section>
+					<section>
+						<h2>Displaying data from ACF (cont)</h2>
+						<p>The code in our post &amp; page templates</p>
+						<pre><code class="hljs">
+while ( have_posts() ) : the_post(); 
+  the_content(__('<span class="more-link">Read more</span>', 'poetry')); 
+  get_template_part( 'layouts/page-builder' ); 
+endwhile;
+					 	</code></pre>
+					</section>
+					<section>
+						<h2>And finally the front-end</h2>
+						<video autoplay controls>
+							<source data-src="img/PIA-front-end.webm" type="video/webm" />
+							<!--<source data-src="video.mp4" type="video/mp4" />-->
+						</video>
+					</section>
+					<section>
+						<h2>The magic kicker</h2>
+						<p>None of this matters unless the client gives their seal of approval.</p>
+						<p class="fragment">The tutorial for this website lasted half an hour over a conference call with screenshare.</p>
+						<p class="fragment">At the end of it, the client told us: </p>
+						<h4 class="fragment"><blockquote><p>We were worried before this tutorial. But now that we know how easy this system is - we can't wait to start using it!</p></blockquote></h4>
+						<p class="fragment">They went ahead and started adding content right away!!</p>
+					</section>
+				</section>
+				<section><h2>In Summation</h2>
+					<p class="fragment">Strategy:</p>
+						<ul class="fragment">
+							<li>figure out what "flexibility" means to your client</li>
+							<li>define what content blocks they'll actually need</li>
+						</ul>
+
+					<p class="fragment">Design:</p>
+						<ul>
+							<li class="fragment">make as many design decision as possible (you're the designer!)
+								<ul>
+									<li>your clients shouldn't have to create columns and rows, work with layout in general</li>
+									<li>they should be focused on content</li>
+								</ul>
+							</li>
+							<li class="fragment">allow for a little variation but don't overwhelm them with options</li>
+							<li class="fragment">define areas for more dynamic content
+								<ul>
+									<li>this can be a block of featured items on the home page</li>
+									<li>or the main content well of pages</li>
+									<li>and, of course, sidebars if your design asks for them</li>
+								</ul>
+							</li>
+						</ul>
+					<p class="fragment">Development:</p>
+						<ul class="fragment">
+							<li>don't ask your client to learn what CSS classes and IDs do</li>
+							<li>reduce code bloat by optimizing how the design options are implemented</li>
+						</ul>
+				</section>
+				<section>
+					<h2>References and further reading</h2>
+					<ul>
+						<li>Advanced Custom Fields - <a href="https://www.advancedcustomfields.com/">advancedcustomfields.com</a></li>
+						<li>ACF Extras - <a href="https://acfextras.com/">acfextras.com</a></li>
+						<li>WordPress ACF Users <a href="https://www.facebook.com/groups/1635334600051668/">facebook.com/groups/1635334600051668/</a></li>
+						<li>WPBakery Visual Composer - <a href="https://vc.wpbakery.com/">vc.wpbakery.com</a></li>
+						<li>SiteOrigin Page Builder - <a href="https://siteorigin.com/page-builder/">siteorigin.com/page-builder</a></li>
+						<li>Creating Custom Meta Boxes - <a href="https://developer.wordpress.org/plugins/metadata/creating-custom-meta-boxes/">developer.wordpress.org/plugins/metadata/creating-custom-meta-boxes</a></li>
+					</ul>
+				</section>
+				<section data-background="img/paperbkg.jpg" data-background-repeat="repeat" data-background-size="852px">
+					<h1>Thank you!</h1>
+					<h4><span>Sasha Endoh</span><span><a href="http://www.twitter.com/sashaendoh" class="plain">@sashaendoh</a></span><span><a href="http://www.sashaendoh.com" class="plain">sashaendoh.com</a></span><h4>
+						<br>
+						<br>
+						<blockquote><p>Any darn fool can make something complex; it takes a genius to make something simple.</p> <span class="attribution">Pete Seeger</span></blockquote>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'slide',
+				center: false,
+				progress: false,
+				controls: false,
+				maxScale: 3,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
