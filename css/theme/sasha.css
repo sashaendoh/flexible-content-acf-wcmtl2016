@@ -11,6 +11,17 @@
  */
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 
+@font-face {
+    font-family: 'Weston Free';
+    src: url('fonts/weston_free-webfont.eot');
+    src: url('fonts/weston_free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/weston_free-webfont.woff') format('woff'),
+         url('fonts/weston_free-webfont.ttf') format('truetype'),
+         url('fonts/weston_free-webfont.svg#weston_freeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
